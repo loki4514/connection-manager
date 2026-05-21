@@ -21,7 +21,7 @@ graph TD
         WritePump <-->|Drains Queue| OutboundChan[Client Outbound Chan]
     end
 
-    subgraph Processing Layer (Worker Pool)
+    subgraph Processing Layer - Worker Pool
         ReadPump -->|Submit Job| Pool[Worker Pool]
         Pool -->|Route by Priority| HighQ[High Priority Queue]
         Pool -->|Route by Priority| LowQ[Low Priority Queue]
